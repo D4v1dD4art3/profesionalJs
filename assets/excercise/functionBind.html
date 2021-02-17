@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul>
+      <li><button class="call-action">hola</button></li>
+      <li><button class="call-action">hola</button></li>
+      <li><button class="call-action">hola</button></li>
+    </ul>
+
+    <script>
+      const buttons = document.getElementsByClassName("call-action");
+      // buttons.forEach((button) => {
+      //   button.onclick = () => alert("nunca pares de aprender");
+      // });
+      // NodeList
+      Array.prototype.forEach.call(buttons, (button) => {
+        button.onclick = () => alert("nunca pares de aprender");
+      });
+    </script>
+  </body>
+</html>

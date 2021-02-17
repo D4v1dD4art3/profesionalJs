@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function Hero(name) {
+        this.name = name;
+      }
+      Hero.prototype.saludar = function () {
+        console.log(`New: ${this.name}`);
+      };
+      const zelda = new Hero("Zelda");
+      zelda.saludar();
+      // instance property
+      console.log("Name:", zelda.name);
+      // class method
+      console.log("Saludar", zelda.saludar);
+      // inheritance
+      console.log("toString", zelda.toString);
+      // hasOnProperty (de deonde sale el string)
+      console.log("zelda.hasOwnProperty('name')", zelda.hasOwnProperty("name"));
+      const prototypeOfZelda = Object.getPrototypeOf(zelda);
+      const protoTypeofPrototypeOfZelda = Object.getPrototypeOf(
+        prototypeOfZelda
+      );
+      console.log(prototypeOfZelda === Hero.prototype); // hace referencia al mismo lugar en memoria
+    </script>
+  </body>
+</html>
