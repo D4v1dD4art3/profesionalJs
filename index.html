@@ -1,30 +1,286 @@
 <html>
   <head>
-    <title>PlatziMediaPlayer.js</title>
+    <title>Netflix</title>
+    <link
+      rel="shortcut icon"
+      href="https://upload.wikimedia.org/wikipedia/commons/0/0c/Netflix_2015_N_logo.svg"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
     <link
       rel="stylesheet"
       href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
     />
-    <link rel="stylesheet" href="./assets/index.css" />
+    <link rel="stylesheet" href="./assets/styles/index.css" />
+    <link rel="stylesheet" href="./assets/styles/card.css" />
+    <link rel="stylesheet" href="./assets/styles/buttons.css" />
   </head>
+  <body id="parallax" >
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Netflix_2015_N_logo.svg"
+          width="30"
+          height="30"
+          alt=""
+          loading="lazy"
+        />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-  <body>
-    <header>
-      <h1>PlatziMediaPlayer.js</h1>
-      <p>An extensible media player.</p>
-    </header>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Dropdown
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link disabled"
+              href="#"
+              tabindex="-1"
+              aria-disabled="true"
+              >Disabled</a
+            >
+          </li>
+        </ul>
+        </form>
+      </div>
+    </nav>
 
     <main class="container">
-      <video class="movie">
-        <source src="./assets/ejercicio.mov" />
-      </video>
-
-      <button>Play/Pause</button>
-      <button id="isMuted">Unmuted/Muted</button>
+      <div class="row">
+        <div class="col">
+          <h1 class="text-center text-white mt-4">Favorites by David</h1>
+          <div class="container-cards">
+            <div class="card">
+              <img
+                src="https://m.media-amazon.com/images/M/MV5BYzk0MGFlZGMtYTk4ZS00MDFiLWJhNDAtODhmYWI2NmNhZDU4XkEyXkFqcGdeQXVyODA1NjQ0OTY@._V1_.jpg"
+                alt="mr.jhon"
+              />
+              <div class="descriptions">
+                <h1>John Wick 3</h1>
+                <p>
+                  After gunning down a member of the High Table -- the shadowy
+                  international assassin's guild -- legendary hit man John Wick
+                  finds himself stripped of the organization's protective
+                  services. Now stuck with a $14 million bounty on his head,
+                  Wick must fight his way through the streets of New York as he
+                  becomes the target of the world's most ruthless killers.
+                </p>
+                <!-- <button class="button from-left">
+                  <i class="fab fa-youtube"></i>
+                  Play trailer on YouTube
+                </button> -->
+                <div class="button">
+                  <svg width="270" height="62">
+                    <defs>
+                      <linearGradient id="grad1">
+                        <stop offset="0%" stop-color="#194496" />
+                        <stop offset="100%" stop-color="#d9091b" />
+                      </linearGradient>
+                    </defs>
+                    <rect
+                      x="5"
+                      y="5"
+                      rx="20"
+                      fill="none"
+                      stroke="url(#grad1)"
+                      width="260"
+                      height="50"
+                    ></rect>
+                  </svg>
+                  <span>Play the trailer</span>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                src="https://images-na.ssl-images-amazon.com/images/I/81PjK6KtcEL._SL1500_.jpg"
+                alt="mr.jhon3"
+              />
+              <div class="descriptions">
+                <h1>Equalizer 2</h1>
+                <p>
+                  If you have a problem and there is nowhere else to turn, the
+                  mysterious and elusive Robert McCall will deliver the
+                  vigilante justice you seek. This time, however, McCall's past
+                  cuts especially close to home when thugs kill Susan Plummer --
+                  his best friend and former colleague. Now out for revenge,
+                  McCall must take on a crew of highly trained assassins who'll
+                  stop at nothing to destroy him.
+                </p>
+                <div class="button">
+                  <svg width="270" height="62">
+                    <defs>
+                      <linearGradient id="grad1">
+                        <stop offset="0%" stop-color="#194496" />
+                        <stop offset="100%" stop-color="#d9091b" />
+                      </linearGradient>
+                    </defs>
+                    <rect
+                      x="5"
+                      y="5"
+                      rx="20"
+                      fill="none"
+                      stroke="url(#grad1)"
+                      width="260"
+                      height="50"
+                    ></rect>
+                  </svg>
+                  <span>Play the trailer</span>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3DfnlkjHUrYlPUIa-1cBX414b9_aq0NmOEQ&usqp=CAU"
+                alt="mr.jhon3"
+              />
+              <div class="descriptions">
+                <h1>Equalizer 2</h1>
+                <p>
+                  If you have a problem and there is nowhere else to turn, the
+                  mysterious and elusive Robert McCall will deliver the
+                  vigilante justice you seek. This time, however, McCall's past
+                  cuts especially close to home when thugs kill Susan Plummer --
+                  his best friend and former colleague. Now out for revenge,
+                  McCall must take on a crew of highly trained assassins who'll
+                  stop at nothing to destroy him.
+                </p>
+                <div class="button">
+                  <svg width="270" height="62">
+                    <defs>
+                      <linearGradient id="grad1">
+                        <stop offset="0%" stop-color="#194496" />
+                        <stop offset="100%" stop-color="#d9091b" />
+                      </linearGradient>
+                    </defs>
+                    <rect
+                      x="5"
+                      y="5"
+                      rx="20"
+                      fill="none"
+                      stroke="url(#grad1)"
+                      width="260"
+                      height="50"
+                    ></rect>
+                  </svg>
+                  <span>Play the trailer</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <h1 class="text-center text-white mt-4"> The Top most's watched movie </h1>
+          <div class="container-grid">
+            <div class="grid-element">
+              <video class="movie">
+                <source src="./assets/ejercicio.mov" />
+              </video>
+              <div class="buttons-container">
+                <ion-icon
+                  id="buttonPaused"
+                  name="play-circle-outline"
+                ></ion-icon>
+                <ion-icon id="isMuted" name="volume-mute-outline"></ion-icon>
+              </div>
+            </div>
+            <!-- <div class="grid-element">
+              <video class="movie">
+                <source src="./assets/ejercicio.mov" />
+              </video>
+              <div class="buttons-container">
+                <ion-icon
+                  id="buttonPaused"
+                  name="play-circle-outline"
+                ></ion-icon>
+                <ion-icon id="isMuted" name="volume-mute-outline"></ion-icon>
+              </div>
+            </div> -->
+            <!-- <div class="grid-element">
+              <video class="movie">
+                <source src="./assets/ejercicio.mov" />
+              </video>
+              <div class="buttons-container">
+                <ion-icon
+                  id="buttonPaused"
+                  name="play-circle-outline"
+                ></ion-icon>
+                <ion-icon id="isMuted" name="volume-mute-outline"></ion-icon>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
     </main>
     <script type="module" src="assets/index.js"></script>
     <script src="assets/excercise/closure.js"></script>
     <script src="assets/excercise/this.js"></script>
     <script src="assets/excercise/scope.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js"
+      integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>
